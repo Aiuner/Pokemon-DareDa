@@ -10,6 +10,8 @@ This will be a webapp game based on the old Pokémon anime segment that would ma
 
 This webapp will be a game of the same nature, but you will be awarded points based on how many tries it takes you to guess the name of the Pokémon, with the potential for additional game modes or difficulty settings later down the line.
 
+The game will make use of the CSS filter property to produce the Pokemon silhouettes.
+
 ## API and Data Sample
 
 I will be using PokeAPI to collect Pokemon names and data that can be used in other game modes/difficulties. Since PokeAPI is not up to date with all 896 Pokémon (at the time of writing), I will not be using any Pokemon after #801 Magearna according to National Dex order.
