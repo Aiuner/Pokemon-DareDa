@@ -12,7 +12,9 @@ This webapp will be a game of the same nature, but you will be awarded points ba
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+I will be using PokeAPI to collect Pokemon names and data that can be used in other game modes/difficulties.
+
+JSON Snippet needed.
 
 ## Wireframes
 
