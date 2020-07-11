@@ -15,7 +15,8 @@ This webapp will be a game of the same nature, but you will be awarded points ba
 I will be using PokeAPI to collect Pokemon names and data that can be used in other game modes/difficulties. Since PokeAPI is not up to date with all 896 Pokémon (at the time of writing), I will not be using any Pokemon after #801 Magearna according to National Dex order.
 
 JSON Snippet
-```{
+
+{
     "count": 964,
     "next": "https://pokeapi.co/api/v2/pokemon?offset=151&limit=151",
     "previous": null,
@@ -56,7 +57,7 @@ JSON Snippet
             "name": "blastoise",
             "url": "https://pokeapi.co/api/v2/pokemon/9/"
         },
-[...]```
+[...]
 
 ## Wireframes
 
