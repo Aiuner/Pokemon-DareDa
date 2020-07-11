@@ -17,6 +17,7 @@ I will be using PokeAPI to collect Pokemon names and data that can be used in ot
 JSON Snippet
 
 {
+
     "count": 964,
     "next": "https://pokeapi.co/api/v2/pokemon?offset=151&limit=151",
     "previous": null,
@@ -57,6 +58,7 @@ JSON Snippet
             "name": "blastoise",
             "url": "https://pokeapi.co/api/v2/pokemon/9/"
         },
+	
 [...]
 
 ## Wireframes
