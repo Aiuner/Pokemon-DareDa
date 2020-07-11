@@ -2,11 +2,13 @@
 
 ## Project Name
 
-The name of your project.
+Pokémon - Dare da?
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This will be a webapp game based on the old Pokémon anime segment that would mark the commercial break that would happen halfway through an episode. You would be presented with a blacked-out silhouette of a Pokémon, often one that made its debut in that episode, and you were expected to guess what Pokémon it was. After commercial break, the Pokémon would be revealed with its name.
+
+This webapp will be a game of the same nature, but you will be awarded points based on how many tries it takes you to guess the name of the Pokémon, with the potential for additional game modes or difficulty settings later down the line.
 
 ## API and Data Sample
 
