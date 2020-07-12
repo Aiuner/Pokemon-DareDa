@@ -72,17 +72,25 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Use PokeAPI to collect Pokémon data.
+- Render data on page.
+- Design a mobile-first webpage for the game.
+- Implement basic game using first 151 Pokémon.
+  - Have game randomly select a Pokémon for each round.
+  - Render silhouette of the Pokemon & generate 4 possible answers (with 1 correct answer).
+  - Score player based on # of guesses (up to 3, then lose that round).
+  - Override previous round with new round, no repeats.
+  - 10 rounds, then shown your score & asked if you want to play again.
+
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+- Use local storage to cache Pokémon data.
+- Add additional Generations of Pokémon to the game.
+- Implement breakpoints in CSS for desktop & tablet versions of the game.
+- Make configurable game settings (# of rounds, Pokémon generations used).
+- Add additional difficulty setting (hard mode - guess Pokémon name by submitting text input).
 
 ## Project Schedule
 
@@ -94,15 +102,15 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
+|July 13| Core Application (HTML, CSS, JS...) | Incomplete
+|July 14| Finish Style Sheet & Implement User Input | Incomplete
+|July 15| Troubleshooting MVP | Incomplete
+|July 16| Additional Troubleshooting, attempt Post-MVP | Incomplete
 |July 17| Presentations | Incomplete
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+https://media.discordapp.net/attachments/272881056053592065/731937003238588536/Priority_Matrix.PNG
 
 ## Timeframes
 
