@@ -14,7 +14,7 @@ The game will make use of the CSS filter property to produce the Pokemon silhoue
 
 ## API and Data Sample
 
-I will be using PokeAPI to collect Pokemon names and data that can be used in other game modes/difficulties. Since PokeAPI is not up to date with all 896 Pokémon (at the time of writing), I will not be using any Pokemon after #801 Magearna according to National Dex order.
+I will be using PokeAPI (https://pokeapi.co/) to collect Pokemon names and data that can be used in other game modes/difficulties. Since PokeAPI is not up to date with all 896 Pokémon (at the time of writing), I will not be using any Pokemon after #801 Magearna according to National Dex order.
 
 JSON Snippet
 
