@@ -102,10 +102,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |July 13| Project Approval | Incomplete
-|July 13| Core Application (HTML, CSS, JS...) | Incomplete
-|July 14| Finish Style Sheet & Implement User Input | Incomplete
-|July 15| Troubleshooting MVP | Incomplete
-|July 16| Additional Troubleshooting, attempt Post-MVP | Incomplete
+|July 13| Core Application (HTML, CSS, JS...), Finish Style Sheet | Incomplete
+|July 14| Implement User Input & leftover MVP, Troubleshooting MVP | Incomplete
+|July 15| Attempt some Post-MVP | Incomplete
+|July 16| Troubleshooting Post-MVP | Incomplete
 |July 17| Presentations | Incomplete
 
 ## Priority Matrix
