@@ -46,14 +46,36 @@ startButton.addEventListener('click', (e) => {
     alert(`You have clicked a button!`);
 });
 
-// generates a random index number to throw into url.
-// fetches pokemon data based on index number - name = correct answer
-// gets type information for that particular pokemon
+// **generates a random index number to throw into url.
+// **fetches pokemon data based on index number - name = correct answer
+// **gets type information for that particular pokemon
+
 // uses types from that pokemon and throws them into a new url
 // generates a combined list of pokemon that are those type
 // randomly selects two pokemon from that combined list = two more answers
+
 // generates a random index number to throw into url.
 // fetches name of pokemon with that index number = last answer
 
 // randomize order of the answers
 // compare strings of answer with correct answer, if it's a match, the selected answer is correct
+
+
+
+// start game removes content from center flex panel ("would you like to play?" & button)
+// replaces left panel image with random pokemon image
+// replaces right panel contents with 4 possible answers (answers are buttons)
+// clicking an answer checks current guesses
+
+// set score = 0; before entering round loops
+// guess = 0;
+// if (name-on-button = correct answer)
+//     switch guess = 0
+//     +5 pts
+//     guess = 1
+//     +2 pts 
+//     guess = 2
+//     +1 pts 
+// else if (name-on-button != correct answer && guess <3)
+//     guess ++
+// else no pts, next rd

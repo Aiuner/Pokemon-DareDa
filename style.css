@@ -17,16 +17,20 @@ body {
     justify-content: space-evenly;
 }
 
-#center {
-    order: 0;
+#right-answers {
+    order: 1;
+    width: 50%;
 }
 
 #left-pkmn {
     order: -1;
+    align-self: center;
+    width: 50%;
 }
 
-#right-answers {
-    order: 1;
+img {
+    filter: brightness(0%);
+    width: 85%;
 }
 
 #yes-button {
@@ -48,6 +52,10 @@ footer {
         height: 300px;
     }
 
+    img {
+        width: 75%;
+    }
+
     #yes-button {
         font-size: 28px;
         line-height: 32px;
@@ -65,6 +73,10 @@ footer {
 @media screen and (min-width: 800px) {
     #playArea {
         height: 500px;
+    }
+
+    img {
+        width: auto;
     }
 
     p {
