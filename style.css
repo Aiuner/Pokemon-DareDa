@@ -1,0 +1,15 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FFDB1E;
+    color: #1500FF;
+}
+
+section {
+    background-color: #D1070C;
+}
+
+footer {
+    color: white;
+    background-color: black;
+}
