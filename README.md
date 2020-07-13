@@ -100,8 +100,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
+|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|July 13| Project Approval | Complete
 |July 13| Core Application (HTML, CSS, JS...), Finish Style Sheets | Incomplete
 |July 14| Implement User Input & leftover MVP, Troubleshooting MVP | Incomplete
 |July 15| Attempt some Post-MVP | Incomplete
@@ -120,10 +120,10 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Base HTML, CSS & JS | H | 1hrs| --hrs | --hrs |
-| Fetching & Rendering API Data | H | 1hrs| --hrs | --hrs |
+| Base HTML, CSS & JS | H | 1hrs| .1hrs | --hrs |
+| Fetching & Rendering API Data | H | 1hrs| .1hrs | --hrs |
 | Implement Base Game w/o User Input | H | 5hrs| --hrs | --hrs |
-| Mobile Page CSS | M | 2hrs| --hrs | --hrs |
+| Mobile Page CSS | M | 2hrs| .1hrs | --hrs |
 | CSS breakpoint for desktop & tablet | L | 2hrs| --hrs | --hrs |
 | Accepting User Input | M | 2hrs| --hrs | --hrs |
 | Troubleshooting | M | 6hrs| --hrs | --hrs |
