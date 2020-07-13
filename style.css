@@ -5,11 +5,80 @@ body {
     color: #1500FF;
 }
 
-section {
+#playArea {
+    height: 200px;
     background-color: #D1070C;
+    background-image: url('assets/daredabg.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#center {
+    order: 0;
+}
+
+#left-pkmn {
+    order: -1;
+}
+
+#right-answers {
+    order: 1;
+}
+
+#yes-button {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+h2 {
+    font-size: 20px;
 }
 
 footer {
     color: white;
     background-color: black;
+}
+
+@media screen and (min-width: 500px) {
+    #playArea {
+        height: 300px;
+    }
+
+    #yes-button {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #playArea {
+        height: 500px;
+    }
+
+    p {
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    #playArea {
+        height: 800px;
+    }
+
+    #yes-button {
+        font-size: 32px;
+        line-height: 36px;
+    }
 }
