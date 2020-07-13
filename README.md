@@ -120,8 +120,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Base HTML, CSS & JS | H | 1hrs| .1hrs | --hrs |
-| Fetching & Rendering API Data | H | 1hrs| .1hrs | --hrs |
+| Base HTML, CSS & JS | H | 1hrs| .5hrs | --hrs |
+| Fetching & Rendering API Data | H | 1hrs| .5hrs | --hrs |
 | Implement Base Game w/o User Input | H | 5hrs| --hrs | --hrs |
 | Mobile Page CSS | M | 2hrs| .1hrs | --hrs |
 | CSS breakpoint for desktop & tablet | L | 2hrs| --hrs | --hrs |
