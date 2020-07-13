@@ -120,12 +120,12 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Base HTML, CSS & JS | H | 1hrs| .5hrs | --hrs |
+| Base HTML, CSS & JS | H | 1hrs| 1hrs | --hrs |
 | Fetching & Rendering API Data | H | 1hrs| .5hrs | --hrs |
-| Implement Base Game w/o User Input | H | 5hrs| 1.5hrs | --hrs |
-| Mobile Page CSS | M | 2hrs| .1hrs | --hrs |
-| CSS breakpoint for desktop & tablet | L | 2hrs| --hrs | --hrs |
-| Accepting User Input | M | 2hrs| --hrs | --hrs |
+| Implement Base Game w/o User Input | H | 5hrs| 3hrs | --hrs |
+| Mobile Page CSS | M | 2hrs| .5hrs | --hrs |
+| CSS breakpoint for desktop & tablet | L | 2hrs| .5hrs | --hrs |
+| Accepting User Input | M | 2hrs| .1hrs | --hrs |
 | Troubleshooting | M | 6hrs| --hrs | --hrs |
 | Post-MVP - Additional Difficulty & Config Settings | M | 4hrs| --hrs | --hrs |
 | Post-MVP - Local Storage cache | L | 6hrs| --hrs | --hrs |
