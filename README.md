@@ -65,7 +65,7 @@ JSON Snippet
 
 ## Wireframes
 
-https://wireframe.cc/Dup1wp
+Mobile: https://wireframe.cc/Dup1wp Desktop: https://wireframe.cc/e6z5iw
 
 ### MVP/PostMVP
 
@@ -76,6 +76,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Use PokeAPI to collect Pokémon data.
 - Render data on page.
 - Design a mobile-first webpage for the game.
+- Implement breakpoints in CSS for desktop & tablet versions of the game.
 - Implement basic game using first 151 Pokémon.
   - Have game randomly select a Pokémon for each round.
   - Render silhouette of the Pokemon & generate 4 possible answers (with 1 correct answer).
@@ -88,7 +89,6 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 - Use local storage to cache Pokémon data.
 - Add additional Generations of Pokémon to the game.
-- Implement breakpoints in CSS for desktop & tablet versions of the game.
 - Make configurable game settings (# of rounds, Pokémon generations used).
 - Add additional difficulty setting (hard mode - guess Pokémon name by submitting text input).
 
@@ -102,7 +102,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |July 13| Project Approval | Incomplete
-|July 13| Core Application (HTML, CSS, JS...), Finish Style Sheet | Incomplete
+|July 13| Core Application (HTML, CSS, JS...), Finish Style Sheets | Incomplete
 |July 14| Implement User Input & leftover MVP, Troubleshooting MVP | Incomplete
 |July 15| Attempt some Post-MVP | Incomplete
 |July 16| Troubleshooting Post-MVP | Incomplete
@@ -124,10 +124,10 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Fetching & Rendering API Data | H | 1hrs| --hrs | --hrs |
 | Implement Base Game w/o User Input | H | 5hrs| --hrs | --hrs |
 | Mobile Page CSS | M | 2hrs| --hrs | --hrs |
+| CSS breakpoint for desktop & tablet | L | 2hrs| --hrs | --hrs |
 | Accepting User Input | M | 2hrs| --hrs | --hrs |
 | Troubleshooting | M | 6hrs| --hrs | --hrs |
 | Post-MVP - Additional Difficulty & Config Settings | M | 4hrs| --hrs | --hrs |
-| Post-MVP - CSS breakpoint for desktop & tablet | L | 2hrs| --hrs | --hrs |
 | Post-MVP - Local Storage cache | L | 6hrs| --hrs | --hrs |
 | Post-MVP - Additional Pokemon Generations | L | .5hrs| --hrs | -hrs |
 | Post-MVP - Additional Troubleshooting | M | 6hrs| --hrs | --hrs |
