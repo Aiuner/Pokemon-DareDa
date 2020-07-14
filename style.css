@@ -1,7 +1,7 @@
 body {
     margin: 0 auto;
     text-align: center;
-    background-color: #FFDB1E;
+    background-color: #ffff80;
     color: #1500FF;
     font-family: 'Roboto', sans-serif;
 }
@@ -34,7 +34,14 @@ h1 {
     order: 1;
     width: 50%;
     justify-self: center;
-    display: block
+    display: flex;
+    flex-direction: column;
+}
+
+.answerList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .answers {
@@ -69,10 +76,13 @@ h2 {
 #yes-button {
     font-size: 18px;
     line-height: 24px;
+    max-width: 75%;
+    align-self: center;
 }
 
 p {
     padding: 0 10px;
+    color: #000000;
 }
 
 footer {
@@ -95,6 +105,12 @@ footer {
 
     .silhouette {
         width: 70%;
+    }
+
+    .answers {
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 4px;
     }
 
     #question {
@@ -126,6 +142,12 @@ footer {
         height: 500px;
     }
 
+    .answers {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 6px;
+    }
+
     #question {
         font-size: 32px;
         border: 5px solid #1500FF;
@@ -143,6 +165,12 @@ footer {
 @media screen and (min-width: 1800px) {
     #playArea {
         height: 800px;
+    }
+
+    .answers {
+        font-size: 36px;
+        line-height: 40px;
+        margin-bottom: 8px;
     }
 
     #yes-button {
