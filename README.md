@@ -122,14 +122,14 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | --- | :---: |  :---: | :---: | :---: |
 | Base HTML, CSS & JS | H | 1hrs| 1hrs | --hrs |
 | Fetching & Rendering API Data | H | 1hrs| .5hrs | --hrs |
-| Implement Base Game w/o User Input | H | 5hrs| 3hrs | --hrs |
+| Implement Base Game w/o User Input | H | 5hrs| 4hrs | --hrs |
 | Mobile Page CSS | M | 2hrs| .5hrs | --hrs |
 | CSS breakpoint for desktop & tablet | L | 2hrs| .5hrs | --hrs |
 | Accepting User Input | M | 2hrs| .1hrs | --hrs |
-| Troubleshooting | M | 6hrs| --hrs | --hrs |
+| Troubleshooting | M | 6hrs| 4hrs | --hrs |
 | Post-MVP - Additional Difficulty & Config Settings | M | 4hrs| --hrs | --hrs |
 | Post-MVP - Local Storage cache | L | 6hrs| --hrs | --hrs |
-| Post-MVP - Additional Pokemon Generations | L | .5hrs| --hrs | -hrs |
+| Post-MVP - Additional Pokemon Generations | L | .5hrs| --hrs | --hrs |
 | Post-MVP - Additional Troubleshooting | M | 6hrs| --hrs | --hrs |
 | Total | H | 35.5hrs| --hrs | --hrs |
 

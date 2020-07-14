@@ -1,22 +1,38 @@
 const domain = `https://pokeapi.co/api/v2/`
+let type1 = null;
+let type2 = null;
+let typeAns1 = null;
+let typeAns2 = null;
+const indexLimiter = 151;
 
 //this is fine and doesn't need tweaking
 let randomIndex = () => { //function to generate a pokemon randomly based on its index number
-    let randomIndexNo = Math.ceil(Math.random()*801);
-    console.log(randomIndexNo);
+    let randomIndexNo = Math.ceil(Math.random()*indexLimiter);
+    //console.log(randomIndexNo);
     return randomIndexNo;
 }
 
-
-let fetchData = async (searchCriteria) => { //fetches data for the pokemon at the index number supplies
+let fetchData = async (searchCriteria, saveTypes = true) => { //fetches data for the pokemon at the index number supplies. saveTypes prevents it from overiding the type answers when generating the random result.
     if (isNaN(searchCriteria)) {
         const namesByType = `${domain}type/${searchCriteria}`;
         try {
             let pkmnNames = await axios.get(namesByType);
-    
-            for (let i = 0; i < pkmnNames.data.pokemon.length; i++)
 
-            console.log(pkmnNames.data.pokemon[i].pokemon.name);
+            //namesByType as an array, checks URL of each and toss any where ${domain}pokemon/(index#) index# is > 151
+
+            for (let i = pkmnNames.data.pokemon.length-1; i >= 0; i--) {
+
+                let currentID = convertURLtoIndex(pkmnNames.data.pokemon[i].pokemon.url);
+                if (currentID > indexLimiter) {
+                    pkmnNames.data.pokemon.pop();
+                }
+            }
+            //start from end of array and pop until all >151 are gone
+    
+            let ansByType = Math.ceil(Math.random()*(pkmnNames.data.pokemon.length-1));
+
+            console.log(pkmnNames.data.pokemon[ansByType].pokemon.name);
+            return pkmnNames.data.pokemon[ansByType].pokemon.name;
         }
         catch (error) {
             console.log(`ERROR in Type Function! ${error}`)
@@ -28,29 +44,54 @@ let fetchData = async (searchCriteria) => { //fetches data for the pokemon at th
             let whoisPkmn = await axios.get(pkmnByIndexNo);
             console.log(whoisPkmn.data.name);
 
-            for (let i = 0; i < whoisPkmn.data.types.length; i++) {
-            console.log(whoisPkmn.data.types[i].type.name)
+            if (saveTypes) {
+                type1 = whoisPkmn.data.types[0].type.name;
+                if (whoisPkmn.data.types.length > 1) {
+                    type2 = whoisPkmn.data.types[1].type.name;
+                }
+                else {
+                    type2 = whoisPkmn.data.types[0].type.name;
+                }
+                //console.log(`${type1} ${type2}`);
+
+                if (type2 !== null) {
+                    typeAns1 = fetchData(type1);
+                    typeAns2 = fetchData(type2);
+                }
             }
-            return whoisPkmn;
+
+            return whoisPkmn.data.name;
         }
         catch (error) {
             console.log(`ERROR in Fetch by Index! ${error}`);
         }
     }
 }
-fetchData(randomIndex());
-fetchData(`flying`);
+
+//game starts
+let correctAns = fetchData(randomIndex()); //gets silhouette pokemon
+let randomAns = fetchData(randomIndex(), false); //gets random pokemon answer
 
 let startButton = document.querySelector("button");
 startButton.addEventListener('click', (e) => {
     alert(`You have clicked a button!`);
 });
 
+let convertURLtoIndex = (url) => {
+    let pokeURL = url;
+    //console.log(pokeURL);
+    let urlArr = pokeURL.split(`/`);
+    //console.log(urlArr);
+    return urlArr[6];
+}
+
 // **generates a random index number to throw into url.
 // **fetches pokemon data based on index number - name = correct answer
-// **gets type information for that particular pokemon
+// **gets type information for that particular pokemon 
+// whoisPkmn is the correct answer
 
 // uses types from that pokemon and throws them into a new url
+
 // generates a combined list of pokemon that are those type
 // randomly selects two pokemon from that combined list = two more answers
 
