@@ -8,23 +8,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <script src="app.js" async defer></script>
         <title>Pokemon - Dare da?</title>
     </head>
     <body>
         <header>
-            <h1>Who's that Pokemon?</h1>
+            <h1>Who's that<h1>
+            <img src="assets/pokemon-logo.png" id="logo"></img>
         </header>
 
         <main>
             <section id="playArea">
                 <div class="region" id="right-answers">
-                    <h2>Would you like to play?</h2>
+                    <h2 id="question">Would you like to play?</h2>
                     <button id="yes-button">Let's Play!</button>
                 </div>
                 <div class="region" id="left-pkmn">
-                    <img src="https://serebii.net/pokemon/art/666.png"></img>
+                    <img src="https://serebii.net/pokemon/art/666.png" class="silhouette"></img>
                 </div>
             </section>
 

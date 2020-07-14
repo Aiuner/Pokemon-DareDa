@@ -3,16 +3,28 @@ body {
     text-align: center;
     background-color: #FFDB1E;
     color: #1500FF;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+#logo {
+    max-width: 35%;
 }
 
 #playArea {
+    border-top: 5px solid #1500FF;
+    border-bottom: 5px solid #1500FF;
     height: 200px;
     background-color: #D1070C;
     background-image: url('assets/daredabg.png');
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    padding: 10px 0;
+    padding: 10px 5px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -20,6 +32,8 @@ body {
 #right-answers {
     order: 1;
     width: 50%;
+    justify-self: center;
+    display: block
 }
 
 #left-pkmn {
@@ -28,32 +42,53 @@ body {
     width: 50%;
 }
 
-img {
+.silhouette {
     filter: brightness(0%);
     width: 75%;
-}
-
-#yes-button {
-    font-size: 20px;
-    line-height: 24px;
 }
 
 h2 {
     font-size: 20px;
 }
 
+#question {
+    padding: 5px 0;
+    font-size: 20px;
+    border: 3px solid #1500FF;
+    background-color: #FFDB1E;
+    border-radius: 48px;
+}
+
+#yes-button {
+    font-size: 18px;
+    line-height: 24px;
+}
+
 footer {
+    padding: 20px 10px;
     color: white;
     background-color: black;
 }
 
 @media screen and (min-width: 500px) {
+    h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
     #playArea {
+        border-top: 8px solid #1500FF;
+        border-bottom: 8px solid #1500FF;
         height: 300px;
     }
 
-    img {
+    .silhouette {
         width: 70%;
+    }
+
+    #question {
+        font-size: 24px;
+        border: 5px solid #1500FF;
     }
 
     #yes-button {
@@ -62,7 +97,7 @@ footer {
     }
 
     h2 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     p {
@@ -71,11 +106,21 @@ footer {
 }
 
 @media screen and (min-width: 800px) {
+    h1 {
+        font-size: 56px;
+        line-height: 56px;
+    }
+
     #playArea {
         height: 500px;
     }
 
-    img {
+    #question {
+        font-size: 32px;
+        border: 5px solid #1500FF;
+    }
+
+    .silhouette {
         max-width: 50%;
     }
 
