@@ -30,7 +30,7 @@ body {
 
 img {
     filter: brightness(0%);
-    width: 85%;
+    width: 75%;
 }
 
 #yes-button {
@@ -53,7 +53,7 @@ footer {
     }
 
     img {
-        width: 75%;
+        width: 70%;
     }
 
     #yes-button {
@@ -76,7 +76,7 @@ footer {
     }
 
     img {
-        width: auto;
+        max-width: 50%;
     }
 
     p {
