@@ -1,3 +1,10 @@
+//TODOs
+//
+// 1. randomize the answer order & indicate when an answer is round.
+// 2. End game & Set up way to start a new game.
+// 3. finish tidying up the CSS, make buttons pretty, maybe add loading bar?
+// 4. add options for changing indexLimiter and maxRounds.
+
 //
 //global variables are all set up here
 //
@@ -11,6 +18,11 @@ let typeAns2 = null;
 let roundAnswers = [];
 const indexLimiter = 801;
 let rtPanel = document.getElementById("right-answers");
+let rndScorebar = document.getElementById("round-score");
+let round = 0;
+let score = 0;
+let guess = 0;
+let maxRounds = 10;
 
 // This function generates a random index number for a Pokemon
 //
@@ -96,6 +108,12 @@ startButton.addEventListener('click', async (e) => {
 //the nextRound function, which starts the next round of the game when it's called. Takes care of clearing out the old answers, updating the pokemon silhouette and adding new answers, etc.
 //
 let nextRound = async () => {
+    //if (round === maxRounds) {
+    //    newGame();
+    //}
+    guess = 0;
+    round++;
+    rndScorebar.innerText = `Round: ${round} || Score: ${score}`
     roundAnswers.splice(0, roundAnswers.length)
     clearRtPanel();
     correctAns = await fetchData(randomIndex()); //gets silhouette pokemon
@@ -137,6 +155,29 @@ let compareAnswer = (answer) => {
     //returns "true" is the text matches, returns "false" if it doesn't. 
 }
 
+// checks each answer you click on and increments the number of guesses if it's wrong. also scores correctly based on the number of guesses made.
+//
+let scoring = (answer) => {
+    if (compareAnswer(answer) === false && guess < 2) {
+        guess++;
+    }
+    else if (compareAnswer(answer) === true && guess === 0) {
+        score = score+5;
+        nextRound();
+    }
+    else if (compareAnswer(answer) === true && guess === 1) {
+        score = score+2;
+        nextRound();
+    }
+    else if (compareAnswer(answer) === true && guess === 2) {
+        score = score+1;
+        nextRound();
+    }
+    else {
+        nextRound();
+    }
+}
+
 //generates functioning answer buttons by taking in an array containing each possible answer, these are made AFTER the array of answers has been filled
 //
 let answerButtons = (rndAnswers) => {
@@ -149,7 +190,7 @@ let answerButtons = (rndAnswers) => {
         answerButton.classList.add("answers");
         answerButton.innerHTML = `${rndAnswers[i]}`
         answerButton.addEventListener('click', () => { //adds click event to check answers
-            compareAnswer(answerButton); //calls compare function when button is clicked
+            scoring(answerButton); //calls compare function when button is clicked
         })
         answerList.append(answerButton);
     }
