@@ -180,7 +180,7 @@ let compareAnswer = (answer) => {
 //
 let scoring = (answer) => {
     if (compareAnswer(answer) === false && guess < 2) {
-        answer.style.backgroundColor = "red";
+        answer.style.backgroundColor = "darkred";
         if (guess === 0) {
             document.querySelector('.silhouette').style.filter = "brightness(5%)";
         }
@@ -192,21 +192,22 @@ let scoring = (answer) => {
     else if (compareAnswer(answer) === true && guess === 0) {
         score = score+5;
         document.querySelector('.silhouette').style.filter = "brightness(100%)";
-        setTimeout( () => nextRound(), 5000);
+        setTimeout( () => nextRound(), 3000);
     }
     else if (compareAnswer(answer) === true && guess === 1) {
         score = score+2;
         document.querySelector('.silhouette').style.filter = "brightness(100%)";
-        setTimeout( () => nextRound(), 5000)
+        setTimeout( () => nextRound(), 3000)
     }
     else if (compareAnswer(answer) === true && guess === 2) {
         score = score+1;
         document.querySelector('.silhouette').style.filter = "brightness(100%)";
-        setTimeout( () => nextRound(), 5000);
+        setTimeout( () => nextRound(), 3000);
     }
     else {
+        answer.style.backgroundColor = "darkred";
         document.querySelector('.silhouette').style.filter = "brightness(100%)";
-        setTimeout( () => nextRound(), 5000);
+        setTimeout( () => nextRound(), 3000);
     }
 }
 
