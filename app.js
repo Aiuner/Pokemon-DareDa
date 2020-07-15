@@ -1,9 +1,8 @@
 //TODOs
 //
-// 1. indicate when an answer is wrong.
-// 2. finish tidying up the CSS, maybe add loading question mark?
-// 3. add options for changing indexLimiter and maxRounds.
-// 4. Update README.
+// 1. finish tidying up the CSS, maybe add loading question mark?
+// 2. add options for changing indexLimiter and maxRounds.
+// 3. Update README.
 
 //
 //global variables are all set up here
@@ -193,21 +192,21 @@ let scoring = (answer) => {
     else if (compareAnswer(answer) === true && guess === 0) {
         score = score+5;
         document.querySelector('.silhouette').style.filter = "brightness(100%)";
-        setTimeout(nextRound(), 10000);
+        setTimeout( () => nextRound(), 5000);
     }
     else if (compareAnswer(answer) === true && guess === 1) {
         score = score+2;
         document.querySelector('.silhouette').style.filter = "brightness(100%)";
-        setTimeout(nextRound(), 10000)
+        setTimeout( () => nextRound(), 5000)
     }
     else if (compareAnswer(answer) === true && guess === 2) {
         score = score+1;
         document.querySelector('.silhouette').style.filter = "brightness(100%)";
-        setTimeout(nextRound(), 10000);
+        setTimeout( () => nextRound(), 5000);
     }
     else {
         document.querySelector('.silhouette').style.filter = "brightness(100%)";
-        setTimeout(nextRound(), 10000);
+        setTimeout( () => nextRound(), 5000);
     }
 }
 
