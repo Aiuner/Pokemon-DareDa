@@ -1,9 +1,10 @@
 //TODOs
 //
-// 1. randomize the answer order & indicate when an answer is round.
+// 1. indicate when an answer is wrong.
 // 2. End game & Set up way to start a new game.
 // 3. finish tidying up the CSS, make buttons pretty, maybe add loading bar?
 // 4. add options for changing indexLimiter and maxRounds.
+// 5. Update README.
 
 //
 //global variables are all set up here
@@ -120,7 +121,7 @@ let nextRound = async () => {
     randomAns = await fetchData(randomIndex(), false); //gets random pokemon answer
     roundAnswers.push(correctAns);
     roundAnswers.push(randomAns);
-    answerButtons(roundAnswers);
+    answerButtons(randomOrder(roundAnswers));
 }
 
 //used to get back the index numbers for Pokemon listed by type. The API does not return the index numbers when used this way, but does return the Pokemon's URL, which *does* have its index number at the very end. Since the Pokemon urls always have the same format, they can be split into an array with the last value being the index number. This is only used when indexLimiter is less than 801.
@@ -147,6 +148,23 @@ let clearRtPanel = () => {
         rtPanel.removeChild(rtPanel.firstChild);
     }
 }
+
+// function to randomize the order of the answer choices
+//
+let randomOrder = (answers) => { //calling argument deck for consistency
+    let randomizedAnswers = answers; //cloning the array
+    let current = answers.length; 
+    let temp = null;
+    let random = null;
+    // Starts from the end of the answers array (roundAnswers will be passed to it) and swaps around the answers to randomize their order.
+    for (let i = answers.length-1; i > -1; i--) {
+      random = Math.floor(Math.random()*(answers.length)); //picks random index in array
+      temp = randomizedAnswers[i]; //stores the value for the current index
+      randomizedAnswers[i] = randomizedAnswers[random]; //copies in the value from the random index to the current one
+      randomizedAnswers[random] = temp; //puts the stored value into the random index
+    }
+    return randomizedAnswers;
+  }
 
 // checks the text on an answer button to see if it matches the text stored in the correctAns variable.
 //
