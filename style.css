@@ -56,8 +56,6 @@ h4 {
 }
 
 .answers {
-    font-size: 18px;
-    line-height: 24px;
     margin-bottom: 2px;
 }
 
@@ -84,11 +82,21 @@ h2 {
     border-radius: 48px;
 }
 
-#yes-button {
+button {
+    padding: 2px;
     font-size: 18px;
-    line-height: 24px;
-    max-width: 75%;
+    line-height: 28px;
     align-self: center;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #155531;
+    transition-duration: 0.2s;
+    border: none;
+    text-transform: capitalize;
+}
+
+button:hover {
+    background-color: #23864e;
 }
 
 #round-score {
@@ -128,8 +136,6 @@ footer {
     }
 
     .answers {
-        font-size: 28px;
-        line-height: 32px;
         margin-bottom: 4px;
     }
 
@@ -138,9 +144,9 @@ footer {
         border: 5px solid #1500FF;
     }
 
-    #yes-button {
+    button {
         font-size: 28px;
-        line-height: 32px;
+        line-height: 42px;
     }
 
     #round-score {
@@ -163,13 +169,21 @@ footer {
         line-height: 56px;
     }
 
+    main {
+        margin: 0 auto;
+        max-width: 85%;
+        border: 5px solid #1500FF;
+        border-radius: 15px;
+    }
+
     #playArea {
-        height: 500px;
+        border-top: none;
+        height: 350px;
     }
 
     .answers {
         font-size: 32px;
-        line-height: 36px;
+        line-height: 46px;
         margin-bottom: 6px;
     }
 
@@ -189,21 +203,19 @@ footer {
     p {
         font-size: 32px;
     }
+
+    footer {
+        margin-top: 10px;
+    }
 }
 
 @media screen and (min-width: 1800px) {
-    #playArea {
-        height: 800px;
-    }
-
     .answers {
-        font-size: 36px;
-        line-height: 40px;
         margin-bottom: 8px;
     }
 
-    #yes-button {
-        font-size: 32px;
-        line-height: 36px;
+    button {
+        font-size: 38px;
+        line-height: 52px;
     }
 }

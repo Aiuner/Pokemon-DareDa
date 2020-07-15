@@ -1,7 +1,7 @@
 //TODOs
 //
 // 1. indicate when an answer is wrong.
-// 2. finish tidying up the CSS, make buttons pretty, maybe add loading bar?
+// 2. finish tidying up the CSS, maybe add loading question mark?
 // 3. add options for changing indexLimiter and maxRounds.
 // 4. Update README.
 
@@ -114,6 +114,7 @@ let nextRound = async () => {
     guess = 0;
     if (round < maxRounds) {
         round++;
+        document.querySelector('.silhouette').style.filter = "brightness(0%)";
         rndScorebar.innerText = `Round: ${round} || Score: ${score}`;
         roundAnswers.splice(0, roundAnswers.length);
         clearRtPanel();
@@ -157,7 +158,6 @@ let clearRtPanel = () => {
 //
 let randomOrder = (answers) => { //calling argument deck for consistency
     let randomizedAnswers = answers; //cloning the array
-    let current = answers.length; 
     let temp = null;
     let random = null;
     // Starts from the end of the answers array (roundAnswers will be passed to it) and swaps around the answers to randomize their order.
@@ -181,22 +181,33 @@ let compareAnswer = (answer) => {
 //
 let scoring = (answer) => {
     if (compareAnswer(answer) === false && guess < 2) {
+        answer.style.backgroundColor = "red";
+        if (guess === 0) {
+            document.querySelector('.silhouette').style.filter = "brightness(5%)";
+        }
+        else if (guess === 1) {
+            document.querySelector('.silhouette').style.filter = "brightness(10%)";
+        }
         guess++;
     }
     else if (compareAnswer(answer) === true && guess === 0) {
         score = score+5;
-        nextRound();
+        document.querySelector('.silhouette').style.filter = "brightness(100%)";
+        setTimeout(nextRound(), 10000);
     }
     else if (compareAnswer(answer) === true && guess === 1) {
         score = score+2;
-        nextRound();
+        document.querySelector('.silhouette').style.filter = "brightness(100%)";
+        setTimeout(nextRound(), 10000)
     }
     else if (compareAnswer(answer) === true && guess === 2) {
         score = score+1;
-        nextRound();
+        document.querySelector('.silhouette').style.filter = "brightness(100%)";
+        setTimeout(nextRound(), 10000);
     }
     else {
-        nextRound();
+        document.querySelector('.silhouette').style.filter = "brightness(100%)";
+        setTimeout(nextRound(), 10000);
     }
 }
 
