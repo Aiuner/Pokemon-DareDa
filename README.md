@@ -131,7 +131,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Post-MVP - Local Storage cache | L | 6hrs| --hrs | --hrs |
 | Post-MVP - Additional Pokemon Generations | L | .5hrs| .25hrs | --hrs |
 | Post-MVP - Additional Troubleshooting | M | 6hrs| 6hrs | --hrs |
-| Total | H | 35.5hrs| --hrs | --hrs |
+| Total | H | 35.5hrs| 22.25hrs | --hrs |
 
 ## Code Snippet
 
