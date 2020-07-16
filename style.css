@@ -99,6 +99,22 @@ button:hover {
     background-color: #23864e;
 }
 
+.qm {
+    background-image: url('assets/daredaQM.png');
+    align-self: center;
+    justify-self: center;
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        max-width: 35%;
+    }
+    50% {
+        max-width: 50%;
+    }
+}
+
 #round-score {
     margin: 0 auto;
     width: 100%;
@@ -163,6 +179,10 @@ footer {
     h1 {
         font-size: 42px;
         line-height: 42px;
+    }
+
+    #logo {
+        max-width: 25vw;
     }
 
     main {

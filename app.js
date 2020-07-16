@@ -114,13 +114,13 @@ let nextRound = async () => {
         rndScorebar.innerText = `Round: ${round} || Score: ${score}`;
         roundAnswers.splice(0, roundAnswers.length);
         clearRtPanel();
-        //loading from here
         correctAns = await fetchData(randomIndex()); //gets silhouette pokemon
         randomAns = await fetchData(randomIndex(), false); //gets random pokemon answer
-        roundAnswers.push(correctAns);
-        roundAnswers.push(randomAns);
-        //to here
-        answerButtons(randomOrder(roundAnswers));
+        roundAnswers.push(correctAns); //adds to answers array
+        roundAnswers.push(randomAns); //adds to answers array
+        showQM();
+        setTimeout ( () => clearRtPanel(), 5000)
+        setTimeout( () => answerButtons(randomOrder(roundAnswers)), 5002);
     }
     else {
         newGamePrompt();
@@ -240,4 +240,10 @@ let newGamePrompt = () => {
     else {
         location.reload();
     }
+}
+
+let showQM = () => {
+    let qm = document.createElement('img');
+    qm.classList.add("qm");
+    rtPanel.append(qm);
 }
