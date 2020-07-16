@@ -113,8 +113,8 @@ let nextRound = async () => {
         roundAnswers.push(correctAns); //adds to answers array
         roundAnswers.push(randomAns); //adds to answers array
         showQM();
-        setTimeout ( () => clearRtPanel(), 7500)
-        setTimeout( () => answerButtons(randomOrder(roundAnswers)), 7502);
+        setTimeout ( () => clearRtPanel(), 4500)
+        setTimeout( () => answerButtons(randomOrder(roundAnswers)), 4502);
     }
     else {
         newGamePrompt();
