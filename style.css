@@ -8,8 +8,8 @@ body {
 
 h1 {
     padding-top: 4px;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 20px;
     margin: auto; 
 }
 
@@ -19,7 +19,7 @@ h4 {
 }
 
 #logo {
-    max-width: 35%;
+    max-width: 32vw;
     margin: auto;
     padding-top: 0;
     padding-bottom: 4px;
@@ -28,7 +28,7 @@ h4 {
 #playArea {
     border-top: 5px solid #1500FF;
     border-bottom: 5px solid #1500FF;
-    height: 200px;
+    height: 25vh;
     background-color: #D1070C;
     background-image: url('assets/daredabg.png');
     background-position: center;
@@ -67,7 +67,7 @@ h4 {
 
 .silhouette {
     filter: brightness(0%);
-    width: 75%;
+    width: 35vw;
 }
 
 h2 {
@@ -121,18 +121,14 @@ footer {
 
 @media screen and (min-width: 500px) {
     h1 {
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 32px;
+        line-height: 32px;
     }
 
     #playArea {
         border-top: 8px solid #1500FF;
         border-bottom: 8px solid #1500FF;
         height: 300px;
-    }
-
-    .silhouette {
-        width: 70%;
     }
 
     .answers {
@@ -165,8 +161,8 @@ footer {
 
 @media screen and (min-width: 800px) {
     h1 {
-        font-size: 56px;
-        line-height: 56px;
+        font-size: 42px;
+        line-height: 42px;
     }
 
     main {
@@ -193,7 +189,7 @@ footer {
     }
 
     .silhouette {
-        max-width: 50%;
+        max-width: 25vw;
     }
 
     #round-score {
@@ -209,9 +205,19 @@ footer {
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .silhouette {
+        max-width: 20vw;
+    }
+}
+
 @media screen and (min-width: 1800px) {
     .answers {
         margin-bottom: 8px;
+    }
+
+    .silhouette {
+        max-width: 12vw;
     }
 
     button {

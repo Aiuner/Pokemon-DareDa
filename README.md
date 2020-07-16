@@ -102,10 +102,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |July 13| Project Approval | Complete
-|July 13| Core Application (HTML, CSS, JS...), Finish Style Sheets | Incomplete
-|July 14| Implement User Input & leftover MVP, Troubleshooting MVP | Incomplete
-|July 15| Attempt some Post-MVP | Incomplete
-|July 16| Troubleshooting Post-MVP | Incomplete
+|July 13| Core Application (HTML, CSS, JS...), Finish Style Sheets | Complete
+|July 14| Implement User Input & leftover MVP, Troubleshooting MVP | Complete
+|July 15| Attempt some Post-MVP | Complete
+|July 16| Attempting more & Troubleshooting Post-MVP | Incomplete
 |July 17| Presentations | Incomplete
 
 ## Priority Matrix
@@ -123,15 +123,15 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Base HTML, CSS & JS | H | 1hrs| 1hrs | --hrs |
 | Fetching & Rendering API Data | H | 1hrs| 1hrs | --hrs |
 | Implement Base Game w/o User Input | H | 5hrs| 6hrs | --hrs |
-| Mobile Page CSS | M | 2hrs| 1hrs | --hrs |
-| CSS breakpoints for desktop & tablet | L | 2hrs| .5hrs | --hrs |
+| Mobile Page CSS | M | 2hrs| 2hrs | --hrs |
+| CSS breakpoints for desktop & tablet | L | 2hrs| 1hrs | --hrs |
 | Accepting User Input | M | 2hrs| .5hrs | --hrs |
 | Troubleshooting | M | 6hrs| 6hrs | --hrs |
-| Post-MVP - Additional Difficulty & Config Settings | M | 4hrs| --hrs | --hrs |
-| Post-MVP - Local Storage cache | L | 6hrs| --hrs | --hrs |
+| Post-MVP - ~~Additional Difficulty~~ & Config Settings | M | 4hrs| --hrs | --hrs |
+| Post-MVP - ~~Local Storage cache~~ | L | 6hrs| --hrs | --hrs |
 | Post-MVP - Additional Pokemon Generations | L | .5hrs| .25hrs | --hrs |
 | Post-MVP - Additional Troubleshooting | M | 6hrs| 6hrs | --hrs |
-| Total | H | 35.5hrs| 22.25hrs | --hrs |
+| Total | H | 35.5hrs| 23.75hrs | --hrs |
 
 ## Code Snippet
 

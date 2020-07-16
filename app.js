@@ -107,9 +107,6 @@ startButton.addEventListener('click', async (e) => {
 //the nextRound function, which starts the next round of the game when it's called. Takes care of clearing out the old answers, updating the pokemon silhouette and adding new answers, etc.
 //
 let nextRound = async () => {
-    //if (round === maxRounds) {
-    //    newGame();
-    //}
     guess = 0;
     if (round < maxRounds) {
         round++;
@@ -117,10 +114,12 @@ let nextRound = async () => {
         rndScorebar.innerText = `Round: ${round} || Score: ${score}`;
         roundAnswers.splice(0, roundAnswers.length);
         clearRtPanel();
+        //loading from here
         correctAns = await fetchData(randomIndex()); //gets silhouette pokemon
         randomAns = await fetchData(randomIndex(), false); //gets random pokemon answer
         roundAnswers.push(correctAns);
         roundAnswers.push(randomAns);
+        //to here
         answerButtons(randomOrder(roundAnswers));
     }
     else {
@@ -176,7 +175,7 @@ let compareAnswer = (answer) => {
     //returns "true" is the text matches, returns "false" if it doesn't. 
 }
 
-// checks each answer you click on and increments the number of guesses if it's wrong. also scores correctly based on the number of guesses made.
+// checks each answer you click on and increments the number of guesses if it's wrong. also scores correctly based on the number of guesses made. Also indicates wrong answers after clicking & shows the pokemon at the end of each round.
 //
 let scoring = (answer) => {
     if (compareAnswer(answer) === false && guess < 2) {
@@ -229,6 +228,8 @@ let answerButtons = (rndAnswers) => {
     }
 }
 
+// pop-up that shows up at the end of a game to ask if the player wants to start over or not. if they say no, it refreshes the page, which reloads the original contents of the right side of the play area.
+//
 let newGamePrompt = () => {
     const newGame = confirm(`The game has ended after ${maxRounds} rounds! Your final score was ${score}. \n\nWould you like to play again?`);
     if (newGame === true) {
