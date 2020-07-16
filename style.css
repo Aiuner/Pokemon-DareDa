@@ -108,17 +108,17 @@ button:hover {
 }
 
 .qm {
-    animation: pulse 2.25s infinite;
+    animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
     0%, 100% {
         width: 25%;
-        height: 25%;
+        height: 15%;
     }
     50% {
         width: 35%;
-        height: 35%;
+        height: 25%;
     }
 }
 

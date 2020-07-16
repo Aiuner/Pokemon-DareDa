@@ -108,13 +108,13 @@ let nextRound = async () => {
         rndScorebar.innerText = `Round: ${round} || Score: ${score}`;
         roundAnswers.splice(0, roundAnswers.length);
         clearRtPanel();
+        showQM();
         correctAns = await fetchData(randomIndex()); //gets silhouette pokemon
         randomAns = await fetchData(randomIndex(), false); //gets random pokemon answer
         roundAnswers.push(correctAns); //adds to answers array
         roundAnswers.push(randomAns); //adds to answers array
-        showQM();
-        setTimeout ( () => clearRtPanel(), 4500)
-        setTimeout( () => answerButtons(randomOrder(roundAnswers)), 4502);
+        setTimeout ( () => clearRtPanel(), 4000)
+        setTimeout( () => answerButtons(randomOrder(roundAnswers)), 4002);
     }
     else {
         newGamePrompt();
