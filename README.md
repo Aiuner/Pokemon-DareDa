@@ -105,7 +105,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |July 13| Core Application (HTML, CSS, JS...), Finish Style Sheets | Complete
 |July 14| Implement User Input & leftover MVP, Troubleshooting MVP | Complete
 |July 15| Attempt some Post-MVP | Complete
-|July 16| Attempting more & Troubleshooting Post-MVP | Incomplete
+|July 16| Attempting more & Troubleshooting Post-MVP | Complete
 |July 17| Presentations | Incomplete
 
 ## Priority Matrix
@@ -135,13 +135,82 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+I consider this API call function to be rather impressive, for me anyway. A lot of work went into it, since it consolidated several async functions, and it ended up resolving quite a few errors and issues I'd been having due to needing multiple async API calls..
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+// This is a combined function for getting Pokemon names either from their index number or from a list of Pokemon by their type from PokeAPI.
+//
+let fetchData = async (searchCriteria, saveTypes = true) => { //saveTypes is used to tell the function whether or not we're generating information for the answer Pokemon or for the random answer.
+
+    if (isNaN(searchCriteria)) {
+        //searchCriteria is a type, this api call returns a list of Pokemon of that type.
+        const namesByType = `${domain}type/${searchCriteria}`;
+        try {
+            let pkmnNames = await axios.get(namesByType);
+
+            //if the game's indexLimiter is set to use a value less than PokeAPI's current maximum Pokedex ID value, it will run the for loop to remove any Pokemon in the type lists whose ID exceed that value.
+            if (indexLimiter < 801) {
+                for (let i = pkmnNames.data.pokemon.length-1; i >= 0; i--) {
+                    let currentID = convertURLtoIndex(pkmnNames.data.pokemon[i].pokemon.url);
+                    if (currentID > indexLimiter) {
+                        pkmnNames.data.pokemon.pop();
+                    }
+                }
+            }
+            //selects a random Pokemon from list for the type its currently looking at.
+            let ansByType = Math.ceil(Math.random()*(pkmnNames.data.pokemon.length-1));
+
+            //returns the name of the randomly selected pokemon from the current list
+            return pkmnNames.data.pokemon[ansByType].pokemon.name;
+        }
+        catch (error) {
+            console.log(`ERROR in Type Function! ${error}`)
+        }
+    }
+    else {
+        //searchCriteria is an index number, this API call returns data for the Pokemon with that index number.
+        const pkmnByIndexNo = `${domain}pokemon/${searchCriteria}`;
+        try {
+            let whoisPkmn = await axios.get(pkmnByIndexNo);
+
+            //if saveTypes is true, this is the answer Pokemon and its types are needed to generate two of the answers.
+            if (saveTypes) {
+                genSilhouette(searchCriteria.toString()); //gets the silhouette to be displayed for the game
+
+                //the if statement deals with the case where a Pokemon is a monotype. If it is, both random Pokemon chosen based on its type will be from the same type list.
+                type1 = whoisPkmn.data.types[0].type.name;
+                if (whoisPkmn.data.types.length > 1) {
+                    type2 = whoisPkmn.data.types[1].type.name;
+                }
+                else {
+                    type2 = whoisPkmn.data.types[0].type.name;
+                }
+
+                //checks to make sure type2 was determined, which is done after type1. If type2 is null, the answers can't be fetched.
+                //these are both "await" because they need to wait for the recursive call to fetchData to return Pokemon names from the type lists.
+                if (type2 !== null) {
+                    typeAns1 = await fetchData(type1);
+                    typeAns2 = await fetchData(type2);
+                }
+                //adds the two type-based answers to the possible answer choices for the round. They are stored in an array.
+                roundAnswers.push(typeAns1);
+                roundAnswers.push(typeAns2);
+            }
+            //returns the name of the Pokemon for the index number that had been passed into this part of the fetchData function.
+            return whoisPkmn.data.name;
+        }
+        catch (error) {
+            console.log(`ERROR in Fetch by Index! ${error}`);
+        }
+    }
 }
 ```
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  
+
+1. Opted to position answer choices beside the silhouette to reduce space needed to play the game. It makes the game more mobile friendly.
+2. Added an area for game instructions. Not everyone is a huge Pokemon nerd and therefore might not understand how to play.
+3. Dropped difficulty setting plans. Due to how the API data is organized, adding in the difficulty setting I had planned would have required far too much time to do. It would essentially be writing an entire second game.
+4. Dropped plans to use Local Storage. It would have been too complicated for me to figure out in time for Presentations due to the sheer amount of data I had wanted to cache.
+5. Added a loading object in the form of the Who's that Pokemon? question mark from the original series. This tells the player that the game is still doing something when it's taking a while to pick a new silhouette and generate answer options, which both rely on async calls to the API. This also generally prevents the player from seeing the game place buttons one at a time, so they see all the answers at once.
