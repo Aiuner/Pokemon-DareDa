@@ -108,7 +108,7 @@ button:hover {
 }
 
 .qm {
-    animation: pulse 1.8s infinite;
+    animation: pulse 2.25s infinite;
 }
 
 @keyframes pulse {
