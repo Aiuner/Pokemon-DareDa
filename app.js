@@ -175,10 +175,10 @@ let scoring = (answer) => {
     if (compareAnswer(answer) === false && guess < 2) {
         answer.style.backgroundColor = "darkred";
         if (guess === 0) {
-            document.querySelector('.silhouette').style.filter = "brightness(10%)";
+            document.querySelector('.silhouette').style.filter = "brightness(15%)";
         }
         else if (guess === 1) {
-            document.querySelector('.silhouette').style.filter = "brightness(20%)";
+            document.querySelector('.silhouette').style.filter = "brightness(30%)";
         }
         guess++;
     }
