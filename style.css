@@ -99,19 +99,26 @@ button:hover {
     background-color: #23864e;
 }
 
+.qmDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
 .qm {
-    background-image: url('assets/daredaQM.png');
-    align-self: center;
-    justify-self: center;
     animation: pulse 2.5s infinite;
 }
 
 @keyframes pulse {
     0%, 100% {
-        max-width: 35%;
+        width: 35%;
+        height: 35%;
     }
     50% {
-        max-width: 50%;
+        width: 50%;
+        height: 50%;
     }
 }
 

@@ -1,9 +1,3 @@
-//TODOs
-//
-// 1. finish tidying up the CSS, maybe add loading question mark?
-// 2. add options for changing indexLimiter and maxRounds.
-// 3. Update README.
-
 //
 //global variables are all set up here
 //
@@ -119,8 +113,8 @@ let nextRound = async () => {
         roundAnswers.push(correctAns); //adds to answers array
         roundAnswers.push(randomAns); //adds to answers array
         showQM();
-        setTimeout ( () => clearRtPanel(), 5000)
-        setTimeout( () => answerButtons(randomOrder(roundAnswers)), 5002);
+        setTimeout ( () => clearRtPanel(), 7500)
+        setTimeout( () => answerButtons(randomOrder(roundAnswers)), 7502);
     }
     else {
         newGamePrompt();
@@ -242,8 +236,14 @@ let newGamePrompt = () => {
     }
 }
 
+// displays the Dare Da? question mark as a loading animation while the fetchData function grabs all the array answers!
+//
 let showQM = () => {
     let qm = document.createElement('img');
     qm.classList.add("qm");
-    rtPanel.append(qm);
+    qm.src = `assets/daredaQM.png`;
+    let qmDiv = document.createElement('div')
+    qmDiv.classList.add('qmDiv');
+    rtPanel.append(qmDiv);
+    qmDiv.append(qm);
 }
