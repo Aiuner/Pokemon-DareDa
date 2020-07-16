@@ -113,8 +113,8 @@ let nextRound = async () => {
         roundAnswers.push(correctAns); //adds to answers array
         roundAnswers.push(randomAns); //adds to answers array
         showQM();
-        setTimeout ( () => clearRtPanel(), 4500)
-        setTimeout( () => answerButtons(randomOrder(roundAnswers)), 4502);
+        setTimeout ( () => clearRtPanel(), 3600)
+        setTimeout( () => answerButtons(randomOrder(roundAnswers)), 3602);
     }
     else {
         newGamePrompt();
@@ -175,10 +175,10 @@ let scoring = (answer) => {
     if (compareAnswer(answer) === false && guess < 2) {
         answer.style.backgroundColor = "darkred";
         if (guess === 0) {
-            document.querySelector('.silhouette').style.filter = "brightness(5%)";
+            document.querySelector('.silhouette').style.filter = "brightness(10%)";
         }
         else if (guess === 1) {
-            document.querySelector('.silhouette').style.filter = "brightness(10%)";
+            document.querySelector('.silhouette').style.filter = "brightness(20%)";
         }
         guess++;
     }
