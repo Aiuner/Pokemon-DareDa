@@ -120,18 +120,18 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Base HTML, CSS & JS | H | 1hrs| 1hrs | --hrs |
-| Fetching & Rendering API Data | H | 1hrs| 1hrs | --hrs |
-| Implement Base Game w/o User Input | H | 5hrs| 6hrs | --hrs |
-| Mobile Page CSS | M | 2hrs| 2hrs | --hrs |
-| CSS breakpoints for desktop & tablet | L | 2hrs| 1hrs | --hrs |
-| Accepting User Input | M | 2hrs| .5hrs | --hrs |
-| Troubleshooting | M | 6hrs| 6hrs | --hrs |
-| Post-MVP - ~~Additional Difficulty~~ & Config Settings | M | 4hrs| --hrs | --hrs |
-| Post-MVP - ~~Local Storage cache~~ | L | 6hrs| --hrs | --hrs |
-| Post-MVP - Additional Pokemon Generations | L | .5hrs| .25hrs | --hrs |
-| Post-MVP - Additional Troubleshooting | M | 6hrs| 8hrs | --hrs |
-| Total | H | 35.5hrs| 25.75hrs | --hrs |
+| Base HTML, CSS & JS | H | 1hrs| 1hrs | 1hrs |
+| Fetching & Rendering API Data | H | 1hrs| 1hrs | 2hrs |
+| Implement Base Game w/o User Input | H | 5hrs| 6hrs | 8hrs |
+| Mobile Page CSS | M | 2hrs| 2hrs | 10hrs |
+| CSS breakpoints for desktop & tablet | L | 2hrs| 1hrs | 11hrs |
+| Accepting User Input | M | 2hrs| .5hrs | 11.5hrs |
+| Troubleshooting | M | 6hrs| 6hrs | 17.5hrs |
+| Post-MVP - ~~Additional Difficulty~~ & Config Settings | M | 4hrs| 0hrs | 17.5hrs |
+| Post-MVP - ~~Local Storage cache~~ | L | 6hrs| 0hrs | 17.5hrs |
+| Post-MVP - Additional Pokemon Generations | L | .5hrs| .25hrs | 17.75hrs |
+| Post-MVP - Additional Troubleshooting | M | 6hrs| 8hrs | 25.75hrs |
+| Total | H | 35.5hrs| 25.75hrs | 25.75hrs |
 
 ## Code Snippet
 
